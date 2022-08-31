@@ -1,1 +1,36 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="newtask">
+      <input type="text" placeholder="Add Tasks" />
+      <button id="add-task">Add</button>
+    </div>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, '279r')">CS 279r</button>
+      <button class="tablinks" onclick="openTab(event, '242')">CS 242</button>
+      <button class="tablinks" onclick="openTab(event, '139')">STAT 139</button>
+    </div>
+
+    <div id="279r" class="tabcontent">
+      <div id="tasks279r"></div>
+    </div>
+
+    <div id="242" class="tabcontent">
+      <div id="tasks242"></div>
+    </div>
+
+    <div id="139" class="tabcontent">
+      <div id="tasks139"></div>
+    </div>
+
+    <script src="taskManager.js"></script>
+  </body>
+</html>
