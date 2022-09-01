@@ -1,10 +1,13 @@
-// keeps track of which tab is active
+// JavaScript is a full-fledged programming language that supports typical programming language features: variables, functions, control flows, and for loops,
+// that are all demonstrated below.
+// variable that keeps track of which tab is active; variables have implicit types, e.g. activeTab is a string.
 var activeTab = "";
 
 // defines behavior when the "Add" button is clicked
 document.querySelector("#add-task").onclick = function () {
   // alerts user if class or taskname has not been chosen
   if (activeTab == "") {
+    // the built-in alert function triggers a pop-up in the browser
     alert("Please select a class");
   }
   else if (document.querySelector("#newtask input").value.length == 0) {
@@ -12,6 +15,7 @@ document.querySelector("#add-task").onclick = function () {
   } 
   // adds new task to active tab's div when a task when valid input is provided
   else {
+    // JS allows for the injection of HTML snippets, via raw strings
     document.querySelector("#" + activeTab).innerHTML += `
         <div class="task">
             <span id="taskname">
@@ -32,13 +36,14 @@ document.querySelector("#add-task").onclick = function () {
         `;
   }
 
-  // set onclick behavior for all task buttons
+  // set onclick behavior for all task buttons, using advantage of HTML classes
   var currentTasksDelete = document.querySelectorAll(".delete");
   var currentTasksComplete = document.querySelectorAll(".complete");
   var currentTasksPriority = document.querySelectorAll(".priority");
 
   // make task div transparent if completed button is clicked
   for (var i = 0; i < currentTasksComplete.length; i++) {
+    // JS also provides functions to modify the CSS of elements
     currentTasksComplete[i].onclick = function () {
       this.parentNode.parentNode.style.opacity = 0.3;
     };
