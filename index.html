@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <!-- the head tag allows us to set metadata about the site -->
   <head>
     <!-- setting the charset to UTF-8 allows emojis to be rendered -->
     <meta
@@ -12,11 +13,14 @@
   </head>
   <body>
     <!-- input box for adding tasks -->
+    <!-- divs are used as a general way to organize content, and also allow for scoped styling through the use of ids/classes -->
+    <!-- ids allow for the targeting of specific HTML elements for styling -->
     <div id="newtask">
       <input type="text" placeholder="Add Tasks" />
       <button id="add-task">Add</button>
     </div>
     <!-- creates the tab divisions by class -->
+    <!-- the onclick attribute allows us to reference javascript functions -->
     <div class="tab">
       <button class="tablinks" onclick="openTab(event, '279r')">CS 279r</button>
       <button class="tablinks" onclick="openTab(event, '242')">CS 242</button>
